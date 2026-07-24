@@ -21,6 +21,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root API Welcome Route
+app.get('/', (req, res) => {
+  res.json({
+    message: 'AI-Powered Manufacturing Quality Assistant API is running',
+    health: '/api/health'
+  });
+});
+
 // Health Check API
 app.get('/api/health', (req, res) => {
   res.json({
