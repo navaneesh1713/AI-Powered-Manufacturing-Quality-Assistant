@@ -7,8 +7,8 @@ const LoginPage = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('engineer@plant.com');
-  const [password, setPassword] = useState('engineer123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -58,7 +58,7 @@ const LoginPage = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="engineer@plant.com"
+                placeholder="name@company.com"
                 className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-10 pr-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -78,14 +78,6 @@ const LoginPage = () => {
                 placeholder="••••••••"
                 className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-10 pr-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               />
-            </div>
-          </div>
-
-          <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-lg text-[11px] text-slate-400">
-            <span className="font-semibold text-slate-300">Demo Accounts:</span>
-            <div className="mt-1 grid grid-cols-2 gap-1 text-[10px]">
-              <div><span className="text-blue-400">engineer@plant.com</span> / engineer123</div>
-              <div><span className="text-blue-400">inspector@plant.com</span> / inspector123</div>
             </div>
           </div>
 
